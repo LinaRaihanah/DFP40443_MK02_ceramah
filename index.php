@@ -68,6 +68,23 @@
         button:hover {
             background: #820050;
         }
+
+       .info-stack {
+            margin-top: 20px;
+        }
+
+        .info-box {
+            background: #fff0fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #ff1fff;
+            margin-bottom: 15px;
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            color: #820050;
+        }
     </style>
 </head>
 
@@ -78,11 +95,11 @@
 <div class="iklan">
     <h1>Ceramah Berbayar: Kejayaan Digital</h1>
 
-    <div class="info-grid">
+    <div class="info-stack">
 
         <div class="info-box">
             <h3>Penceramah</h3>
-            <p><strong>Nama:</strong> Dr. Irfan</p>
+            <p><strong>Nama:</strong> Dr. Ahmad Zaki</p>
             <p><strong>Gelaran:</strong> Pensyarah Kanan</p>
             <p><strong>Kepakaran:</strong> Teknologi Maklumat & Motivasi</p>
         </div>
@@ -148,7 +165,7 @@
 
         <button type="submit">Hantar</button>
     </form>
-
+  </div>
 </div>
 
 </body>

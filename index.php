@@ -99,8 +99,8 @@
 
         <div class="info-box">
             <h3>Penceramah</h3>
-            <p><strong>Nama:</strong> Encik Sabri</p>
-            <p><strong>Gelaran:</strong> Pensyarah Kanan</p>
+            <p><strong>Nama:</strong> Puan Hawariyah</p>
+            <p><strong>Gelaran:</strong> Ketua Jabatan Teknologi Maklumat Dan Komunikasi</p>
             <p><strong>Kepakaran:</strong> Teknologi Maklumat & Motivasi</p>
         </div>
 

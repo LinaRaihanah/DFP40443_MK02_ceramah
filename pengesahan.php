@@ -1,10 +1,12 @@
 <?php
+// Terima data daripada borang
 $nama     = $_POST['nama'];
 $email    = $_POST['email'];
 $telefon  = $_POST['telefon'];
 $kategori = $_POST['kategori'];
 $slot     = $_POST['slot'];
 
+// Tetapan harga
 $harga_unit = 2500;
 $jumlah_yuran = $harga_unit * $slot;
 ?>
@@ -54,7 +56,7 @@ $jumlah_yuran = $harga_unit * $slot;
     <p><strong>Harga Seunit:</strong> RM <?php echo number_format($harga_unit, 2); ?></p>
 
     <p class="total">
-        Jumlah Yuran Perlu Dibayar:  
+        Jumlah Yuran Perlu Dibayar:
         RM <?php echo number_format($jumlah_yuran, 2); ?>
     </p>
 </div>

@@ -12,15 +12,21 @@
 
         .container {
             width: 90%;
-            max-width: 700px;
+            max-width: 800px;
             margin: 30px auto;
             background: #ffffff;
             padding: 20px;
             border-radius: 8px;
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             color: #b31f9c;
+        }
+
+        .iklan {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
         }
 
         label {
@@ -29,8 +35,8 @@
             display: block;
         }
 
-        input:not([type="checkbox"]), 
-        select, 
+        input:not([type="checkbox"]),
+        select,
         button {
             width: 100%;
             padding: 8px;
@@ -45,7 +51,7 @@
             font-weight: normal;
         }
 
-        .checkbox-label input[type="checkbox"] {
+        .checkbox-label input {
             width: auto;
             margin-right: 8px;
         }
@@ -68,31 +74,72 @@
 <body>
 
 <div class="container">
+
+<div class="iklan">
     <h1>Ceramah Berbayar: Kejayaan Digital</h1>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <h3>Penceramah</h3>
+            <p><strong>Nama:</strong> Dr. Irfan</p>
+            <p><strong>Gelaran:</strong> Pensyarah Kanan</p>
+            <p><strong>Kepakaran:</strong> Teknologi Maklumat & Motivasi</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Sinopsis</h3>
+            <p>
+                Ceramah ini memberi pendedahan tentang kemahiran digital,
+                pengurusan kerjaya dan strategi kejayaan dalam era teknologi.
+            </p>
+        </div>
+
+        <div class="info-box">
+            <h3>Logistik</h3>
+            <p><strong>Tarikh:</strong> 15 Mei 2026</p>
+            <p><strong>Masa:</strong> 9.00 pagi – 4.00 petang</p>
+            <p><strong>Lokasi:</strong> Dewan Seminar Utama</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Yuran</h3>
+            <p><strong>RM 2,500.00</strong> / slot</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Maklumat Hubungan</h3>
+            <p>E-mel: info@ceramahdigital.my</p>
+            <p>Telefon: 012-3456789</p>
+        </div>
+
+    </div>
+</div>
+
     <h2>Borang Tempahan</h2>
 
     <form action="pengesahan.php" method="POST">
 
-        <label for="nama">Nama Penuh</label>
-        <input type="text" id="nama" name="nama" required>
+        <label>Nama Penuh</label>
+        <input type="text" name="nama" required>
 
-        <label for="email">Alamat E-mel</label>
-        <input type="email" id="email" name="email" required>
+        <label>Alamat E-mel</label>
+        <input type="email" name="email" required>
 
-        <label for="telefon">Nombor Telefon</label>
-        <input type="text" id="telefon" name="telefon" required>
+        <label>Nombor Telefon</label>
+        <input type="text" name="telefon" required>
 
-        <label for="kategori">Kategori Peserta</label>
-        <select id="kategori" name="kategori" required>
+        <label>Kategori Peserta</label>
+        <select name="kategori" required>
             <option value="">-- Pilih --</option>
-            <option value="Pelajar">Pelajar</option>
-            <option value="Pensyarah">Pensyarah</option>
-            <option value="Orang Awam">Orang Awam</option>
-            <option value="Korporat">Korporat</option>
+            <option>Pelajar</option>
+            <option>Pensyarah</option>
+            <option>Orang Awam</option>
+            <option>Korporat</option>
         </select>
 
-        <label for="slot">Bilangan Slot</label>
-        <input type="number" id="slot" name="slot" min="1" required>
+        <label>Bilangan Slot</label>
+        <input type="number" name="slot" min="1" required>
 
         <label class="checkbox-label">
             <input type="checkbox" required>
@@ -100,8 +147,8 @@
         </label>
 
         <button type="submit">Hantar</button>
-
     </form>
+
 </div>
 
 </body>

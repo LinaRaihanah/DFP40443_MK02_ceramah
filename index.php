@@ -99,7 +99,7 @@
 
         <div class="info-box">
             <h3>Penceramah</h3>
-            <p><strong>Nama:</strong> Dr. Ahmad Zaki</p>
+            <p><strong>Nama:</strong> Encik Sabri</p>
             <p><strong>Gelaran:</strong> Pensyarah Kanan</p>
             <p><strong>Kepakaran:</strong> Teknologi Maklumat & Motivasi</p>
         </div>

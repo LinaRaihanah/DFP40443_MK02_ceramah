@@ -7,7 +7,7 @@ $kategori = $_POST['kategori'];
 $slot     = $_POST['slot'];
 
 // Tetapan harga
-$harga_unit = 2500;
+$harga_unit = 30;
 $jumlah_yuran = $harga_unit * $slot;
 ?>
 

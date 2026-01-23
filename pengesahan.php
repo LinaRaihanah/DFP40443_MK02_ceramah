@@ -19,7 +19,7 @@ $jumlah_yuran = $harga_unit * $slot;
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #eef6ff;
+            background: #fa9cff;
         }
         .box {
             width: 90%;
@@ -31,7 +31,7 @@ $jumlah_yuran = $harga_unit * $slot;
             border-radius: 8px;
         }
         h2 {
-            color: #0a3d62;
+            color: #b31f9c;
         }
         p {
             margin: 8px 0;

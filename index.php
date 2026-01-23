@@ -85,6 +85,15 @@
             margin-top: 0;
             color: #820050;
         }
+
+        .penceramah-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px;
+            border-radius: 20px;
+        }
+
     </style>
 </head>
 
@@ -99,6 +108,7 @@
 
         <div class="info-box">
             <h3>Penceramah</h3>
+            <img src="penceramah.jpg" class="penceramah-img">
             <p><strong>Nama:</strong> Puan Hawariyah</p>
             <p><strong>Gelaran:</strong> Ketua Jabatan Teknologi Maklumat Dan Komunikasi</p>
             <p><strong>Kepakaran:</strong> Teknologi Maklumat & Motivasi</p>

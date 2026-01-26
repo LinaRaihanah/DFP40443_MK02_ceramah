@@ -5,10 +5,9 @@ $penceramah = "Puan Hawariyah";
 $jawatan = "Ketua Jabatan Teknologi Maklumat & Komunikasi";
 $tarikh = "15 Mei 2026";
 $masa = "9.00 pagi – 4.00 petang";
-$lokasi = "Dewan Seminar Utama";
-$harga = 2500;
+$lokasi = "Dewan Kuliah Utama";
+$harga = 35; 
 ?>
-
 <!DOCTYPE html>
 <html lang="ms">
 <head>
@@ -70,9 +69,6 @@ $harga = 2500;
 
         <label>Bilangan Slot</label>
         <input type="number" name="slot" min="1" required>
-
-        <!-- hantar harga ke pengesahan -->
-        <input type="hidden" name="harga" value="<?php echo $harga; ?>">
 
         <label class="checkbox-label">
             <input type="checkbox" required>

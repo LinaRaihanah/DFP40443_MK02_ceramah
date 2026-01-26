@@ -4,11 +4,10 @@ $email    = $_POST['email'];
 $telefon  = $_POST['telefon'];
 $kategori = $_POST['kategori'];
 $slot     = $_POST['slot'];
-$harga    = $_POST['harga'];
 
+$harga = 35; 
 $jumlah = $harga * $slot;
 ?>
-
 <!DOCTYPE html>
 <html lang="ms">
 <head>
@@ -27,7 +26,7 @@ $jumlah = $harga * $slot;
         <p><strong>Penceramah:</strong> Puan Hawariyah</p>
         <p><strong>Tarikh:</strong> 15 Mei 2026</p>
         <p><strong>Masa:</strong> 9.00 pagi – 4.00 petang</p>
-        <p><strong>Lokasi:</strong> Dewan Seminar Utama</p>
+        <p><strong>Lokasi:</strong> Dewan Kuliah Utama</p>
     </div>
 
     <div class="info-box">
@@ -46,7 +45,6 @@ $jumlah = $harga * $slot;
             Jumlah Bayaran: RM <?php echo number_format($jumlah,2); ?>
         </p>
     </div>
-
 </div>
 
 </body>

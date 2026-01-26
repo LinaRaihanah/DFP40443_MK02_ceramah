@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fa9cff;
+}
+
+.container, .box {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #b31f9c;
+}
+
+.iklan {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+input:not([type="checkbox"]),
+select,
+button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.checkbox-label input {
+    width: auto;
+    margin-right: 8px;
+}
+
+button {
+    background: #ff1fff;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #820050;
+}
+
+.info-box {
+    background: #fff0fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #ff1fff;
+    margin-bottom: 15px;
+}
+
+.penceramah-img {
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}

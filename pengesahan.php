@@ -1,14 +1,12 @@
 <?php
-// Terima data daripada borang
 $nama     = $_POST['nama'];
 $email    = $_POST['email'];
 $telefon  = $_POST['telefon'];
 $kategori = $_POST['kategori'];
 $slot     = $_POST['slot'];
+$harga    = $_POST['harga'];
 
-// Tetapan harga
-$harga_unit = 30;
-$jumlah_yuran = $harga_unit * $slot;
+$jumlah = $harga * $slot;
 ?>
 
 <!DOCTYPE html>
@@ -16,49 +14,39 @@ $jumlah_yuran = $harga_unit * $slot;
 <head>
     <meta charset="UTF-8">
     <title>Pengesahan Pendaftaran</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #fa9cff;
-        }
-        .box {
-            width: 90%;
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 8px;
-        }
-        h2 {
-            color: #b31f9c;
-        }
-        p {
-            margin: 8px 0;
-        }
-        .total {
-            font-size: 18px;
-            font-weight: bold;
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="box">
     <h2>Pengesahan Pendaftaran</h2>
 
-    <p><strong>Nama:</strong> <?php echo $nama; ?></p>
-    <p><strong>E-mel:</strong> <?php echo $email; ?></p>
-    <p><strong>Telefon:</strong> <?php echo $telefon; ?></p>
-    <p><strong>Kategori:</strong> <?php echo $kategori; ?></p>
-    <p><strong>Bilangan Slot:</strong> <?php echo $slot; ?></p>
-    <p><strong>Harga Seunit:</strong> RM <?php echo number_format($harga_unit, 2); ?></p>
+    <div class="info-box">
+        <h3>Maklumat Ceramah</h3>
+        <p><strong>Tajuk:</strong> Ceramah Kejayaan Digital</p>
+        <p><strong>Penceramah:</strong> Puan Hawariyah</p>
+        <p><strong>Tarikh:</strong> 15 Mei 2026</p>
+        <p><strong>Masa:</strong> 9.00 pagi – 4.00 petang</p>
+        <p><strong>Lokasi:</strong> Dewan Seminar Utama</p>
+    </div>
 
-    <p class="total">
-        Jumlah Yuran Perlu Dibayar:
-        RM <?php echo number_format($jumlah_yuran, 2); ?>
-    </p>
+    <div class="info-box">
+        <h3>Maklumat Peserta</h3>
+        <p><strong>Nama:</strong> <?php echo $nama; ?></p>
+        <p><strong>E-mel:</strong> <?php echo $email; ?></p>
+        <p><strong>Telefon:</strong> <?php echo $telefon; ?></p>
+        <p><strong>Kategori:</strong> <?php echo $kategori; ?></p>
+        <p><strong>Bilangan Slot:</strong> <?php echo $slot; ?></p>
+    </div>
+
+    <div class="info-box">
+        <h3>Bayaran</h3>
+        <p>Harga Seunit: RM <?php echo number_format($harga,2); ?></p>
+        <p class="total">
+            Jumlah Bayaran: RM <?php echo number_format($jumlah,2); ?>
+        </p>
+    </div>
+
 </div>
 
 </body>

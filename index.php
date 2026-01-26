@@ -1,117 +1,33 @@
+<?php
+// Maklumat ceramah
+$tajuk = "Ceramah Berbayar: Kejayaan Digital";
+$penceramah = "Puan Hawariyah";
+$jawatan = "Ketua Jabatan Teknologi Maklumat & Komunikasi";
+$tarikh = "15 Mei 2026";
+$masa = "9.00 pagi – 4.00 petang";
+$lokasi = "Dewan Seminar Utama";
+$harga = 2500;
+?>
+
 <!DOCTYPE html>
 <html lang="ms">
 <head>
     <meta charset="UTF-8">
-    <title>Ceramah Berbayar</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #fa9cff;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 30px auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        h1, h2, h3 {
-            color: #b31f9c;
-        }
-
-        .iklan {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #eee;
-        }
-
-        label {
-            font-weight: bold;
-            margin-top: 10px;
-            display: block;
-        }
-
-        input:not([type="checkbox"]),
-        select,
-        button {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-
-        .checkbox-label {
-            display: flex;
-            align-items: center;
-            margin-top: 15px;
-            font-weight: normal;
-        }
-
-        .checkbox-label input {
-            width: auto;
-            margin-right: 8px;
-        }
-
-        button {
-            background: #ff1fff;
-            color: white;
-            border: none;
-            margin-top: 20px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        button:hover {
-            background: #820050;
-        }
-
-       .info-stack {
-            margin-top: 20px;
-        }
-
-        .info-box {
-            background: #fff0fa;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 5px solid #ff1fff;
-            margin-bottom: 15px;
-        }
-
-        .info-box h3 {
-            margin-top: 0;
-            color: #820050;
-        }
-
-        .penceramah-img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 150px;
-            border-radius: 20px;
-        }
-
-    </style>
+    <title><?php echo $tajuk; ?></title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
 
-<div class="iklan">
-    <h1>Ceramah Berbayar: Kejayaan Digital</h1>
-
-    <div class="info-stack">
+    <div class="iklan">
+        <h1><?php echo $tajuk; ?></h1>
 
         <div class="info-box">
             <h3>Penceramah</h3>
             <img src="penceramah.jpg" class="penceramah-img">
-            <p><strong>Nama:</strong> Puan Hawariyah</p>
-            <p><strong>Gelaran:</strong> Ketua Jabatan Teknologi Maklumat Dan Komunikasi</p>
-            <p><strong>Kepakaran:</strong> Teknologi Maklumat & Motivasi</p>
+            <p><strong>Nama:</strong> <?php echo $penceramah; ?></p>
+            <p><strong>Jawatan:</strong> <?php echo $jawatan; ?></p>
         </div>
 
         <div class="info-box">
@@ -124,29 +40,16 @@
 
         <div class="info-box">
             <h3>Logistik</h3>
-            <p><strong>Tarikh:</strong> 15 Mei 2026</p>
-            <p><strong>Masa:</strong> 9.00 pagi – 4.00 petang</p>
-            <p><strong>Lokasi:</strong> Dewan Seminar Utama</p>
+            <p><strong>Tarikh:</strong> <?php echo $tarikh; ?></p>
+            <p><strong>Masa:</strong> <?php echo $masa; ?></p>
+            <p><strong>Lokasi:</strong> <?php echo $lokasi; ?></p>
+            <p><strong>Yuran:</strong> RM <?php echo number_format($harga,2); ?> / slot</p>
         </div>
-
-        <div class="info-box">
-            <h3>Yuran</h3>
-            <p><strong>RM 2,500.00</strong> / slot</p>
-        </div>
-
-        <div class="info-box">
-            <h3>Maklumat Hubungan</h3>
-            <p>E-mel: info@ceramahdigital.my</p>
-            <p>Telefon: 012-3456789</p>
-        </div>
-
     </div>
-</div>
 
     <h2>Borang Tempahan</h2>
 
     <form action="pengesahan.php" method="POST">
-
         <label>Nama Penuh</label>
         <input type="text" name="nama" required>
 
@@ -168,6 +71,9 @@
         <label>Bilangan Slot</label>
         <input type="number" name="slot" min="1" required>
 
+        <!-- hantar harga ke pengesahan -->
+        <input type="hidden" name="harga" value="<?php echo $harga; ?>">
+
         <label class="checkbox-label">
             <input type="checkbox" required>
             Saya bersetuju dengan Terma & Syarat
@@ -175,7 +81,7 @@
 
         <button type="submit">Hantar</button>
     </form>
-  </div>
+
 </div>
 
 </body>

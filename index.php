@@ -19,31 +19,43 @@ $harga = 35;
 
 <div class="container">
 
-    <div class="iklan">
-        <h1><?php echo $tajuk; ?></h1>
+    <h1><?php echo $tajuk; ?></h1>
 
-        <div class="info-box">
-            <h3>Penceramah</h3>
-            <img src="penceramah.jpg" class="penceramah-img">
-            <p><strong>Nama:</strong> <?php echo $penceramah; ?></p>
-            <p><strong>Jawatan:</strong> <?php echo $jawatan; ?></p>
-        </div>
-
-        <div class="info-box">
-            <h3>Sinopsis</h3>
-            <p>
-                Ceramah ini memberi pendedahan tentang kemahiran digital,
-                pengurusan kerjaya dan strategi kejayaan dalam era teknologi.
-            </p>
-        </div>
-
-        <div class="info-box">
-            <h3>Logistik</h3>
-            <p><strong>Tarikh:</strong> <?php echo $tarikh; ?></p>
-            <p><strong>Masa:</strong> <?php echo $masa; ?></p>
-            <p><strong>Lokasi:</strong> <?php echo $lokasi; ?></p>
-            <p><strong>Yuran:</strong> RM <?php echo number_format($harga,2); ?> / slot</p>
-        </div>
+    <div class="info-box">
+        <!-- Gambar Penceramah -->
+        <img src="penceramah.jpg" class="penceramah-img">
+        
+        <!-- Table Maklumat Ceramah -->
+        <table class="info-table">
+            <tr>
+                <td><strong>Tajuk: </strong></td>
+                <td><?php echo $tajuk; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Penceramah: </strong></td>
+                <td><?php echo $penceramah; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Jawatan: </strong></td>
+                <td><?php echo $jawatan; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Tarikh: </strong></td>
+                <td><?php echo $tarikh; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Masa: </strong></td>
+                <td><?php echo $masa; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Lokasi: </strong></td>
+                <td><?php echo $lokasi; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Yuran: </strong></td>
+                <td>RM <?php echo number_format($harga,2); ?> / slot</td>
+            </tr>
+        </table>
     </div>
 
     <h2>Borang Tempahan</h2>

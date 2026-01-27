@@ -1,11 +1,12 @@
 <?php
-$nama     = $_POST['nama'];
-$email    = $_POST['email'];
-$telefon  = $_POST['telefon'];
-$kategori = $_POST['kategori'];
-$slot     = $_POST['slot'];
+// Terima data dari borang
+$nama     = $_POST['nama'] ?? '';
+$email    = $_POST['email'] ?? '';
+$telefon  = $_POST['telefon'] ?? '';
+$kategori = $_POST['kategori'] ?? '';
+$slot     = $_POST['slot'] ?? 0;
 
-$harga = 35; 
+$harga  = 35;
 $jumlah = $harga * $slot;
 ?>
 <!DOCTYPE html>
@@ -20,31 +21,75 @@ $jumlah = $harga * $slot;
 <div class="box">
     <h2>Pengesahan Pendaftaran</h2>
 
-    <div class="info-box">
-        <h3>Maklumat Ceramah</h3>
-        <p><strong>Tajuk:</strong> Ceramah Kejayaan Digital</p>
-        <p><strong>Penceramah:</strong> Puan Hawariyah</p>
-        <p><strong>Tarikh:</strong> 15 Mei 2026</p>
-        <p><strong>Masa:</strong> 9.00 pagi – 4.00 petang</p>
-        <p><strong>Lokasi:</strong> Dewan Kuliah Utama</p>
-    </div>
+    <!-- Maklumat Ceramah -->
+    <h3>Maklumat Ceramah</h3>
+    <table class="table">
+        <tr>
+            <td><strong>Tajuk: </strong></td>
+            <td>Ceramah Kejayaan Digital</td>
+        </tr>
+        <tr>
+            <td><strong>Penceramah: </strong></td>
+            <td>Puan Hawariyah</td>
+        </tr>
+        <tr>
+            <td><strong>Tarikh: </strong></td>
+            <td>15 Mei 2026</td>
+        </tr>
+        <tr>
+            <td><strong>Masa: </strong></td>
+            <td>9.00 pagi – 4.00 petang</td>
+        </tr>
+        <tr>
+            <td><strong>Lokasi: </strong></td>
+            <td>Dewan Kuliah Utama</td>
+        </tr>
+    </table>
 
-    <div class="info-box">
-        <h3>Maklumat Peserta</h3>
-        <p><strong>Nama:</strong> <?php echo $nama; ?></p>
-        <p><strong>E-mel:</strong> <?php echo $email; ?></p>
-        <p><strong>Telefon:</strong> <?php echo $telefon; ?></p>
-        <p><strong>Kategori:</strong> <?php echo $kategori; ?></p>
-        <p><strong>Bilangan Slot:</strong> <?php echo $slot; ?></p>
-    </div>
+    <hr class="separator">
 
-    <div class="info-box">
-        <h3>Bayaran</h3>
-        <p>Harga Seunit: RM <?php echo number_format($harga,2); ?></p>
-        <p class="total">
-            Jumlah Bayaran: RM <?php echo number_format($jumlah,2); ?>
-        </p>
-    </div>
+    <!-- Maklumat Peserta -->
+    <h3>Maklumat Peserta</h3>
+    <table class="table">
+        <tr>
+            <td><strong>Nama: </strong></td>
+            <td><?php echo htmlspecialchars($nama); ?></td>
+        </tr>
+        <tr>
+            <td><strong>Email: </strong></td>
+            <td><?php echo htmlspecialchars($email); ?></td>
+        </tr>
+        <tr>
+            <td><strong>No Telefon: </strong></td>
+            <td><?php echo htmlspecialchars($telefon); ?></td>
+        </tr>
+        <tr>
+            <td><strong>Kategori: </strong></td>
+            <td><?php echo htmlspecialchars($kategori); ?></td>
+        </tr>
+        <tr>
+            <td><strong>Bilangan slot: </strong></td>
+            <td><?php echo htmlspecialchars($slot); ?></td>
+        </tr>
+    </table>
+
+    <hr class="separator">
+
+    <!-- Maklumat Bayaran -->
+    <h3>Maklumat Bayaran</h3>
+    <table class="table">
+        <tr>
+            <td><strong>Harga satu slot</strong></td>
+            <td>RM <?php echo number_format($harga, 2); ?></td>
+        </tr>
+        <tr class="total">
+            <td>Jumlah Yuran: </td>
+            <td>RM <?php echo number_format($jumlah, 2); ?></td>
+        </tr>
+        <tr class="total">
+            <td>Pendaftaran Berjaya! </td>
+        </tr>
+    </table>
 </div>
 
 </body>

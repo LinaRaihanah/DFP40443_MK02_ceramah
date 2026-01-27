@@ -79,7 +79,7 @@ $jumlah = $harga * $slot;
     <h3>Maklumat Bayaran</h3>
     <table class="table">
         <tr>
-            <td><strong>Harga satu slot</strong></td>
+            <td><strong>Harga satu slot: </strong></td>
             <td>RM <?php echo number_format($harga, 2); ?></td>
         </tr>
         <tr class="total">

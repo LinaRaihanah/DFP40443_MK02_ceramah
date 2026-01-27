@@ -20,7 +20,8 @@ $jumlah = $harga * $slot;
 
 <div class="box">
     <h2>Pengesahan Pendaftaran</h2>
-
+    <div class="info-box">
+     
     <!-- Maklumat Ceramah -->
     <h3>Maklumat Ceramah</h3>
     <table class="table">
@@ -45,9 +46,12 @@ $jumlah = $harga * $slot;
             <td>Dewan Kuliah Utama</td>
         </tr>
     </table>
+    </div>
 
     <hr class="separator">
 
+    <div class="info-box">
+     
     <!-- Maklumat Peserta -->
     <h3>Maklumat Peserta</h3>
     <table class="table">
@@ -72,9 +76,11 @@ $jumlah = $harga * $slot;
             <td><?php echo htmlspecialchars($slot); ?></td>
         </tr>
     </table>
+    </div>
 
     <hr class="separator">
 
+    <div class="info-box">
     <!-- Maklumat Bayaran -->
     <h3>Maklumat Bayaran</h3>
     <table class="table">
@@ -82,14 +88,15 @@ $jumlah = $harga * $slot;
             <td><strong>Harga satu slot: </strong></td>
             <td>RM <?php echo number_format($harga, 2); ?></td>
         </tr>
-        <tr class="total">
-            <td>Jumlah Yuran: </td>
+        <tr class="table">
+            <td><strong>Jumlah Yuran: </strong></td>
             <td>RM <?php echo number_format($jumlah, 2); ?></td>
         </tr>
         <tr class="total">
             <td>Pendaftaran Berjaya! </td>
         </tr>
     </table>
+    </div>
 </div>
 
 </body>
